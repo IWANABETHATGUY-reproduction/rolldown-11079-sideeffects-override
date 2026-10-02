@@ -1,5 +1,4 @@
 // Override with a plugin. A hook value takes priority over `package.json#sideEffects`.
-// This form also works in Vite.
 export default {
   input: 'src/main.js',
   plugins: [

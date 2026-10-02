@@ -4,8 +4,10 @@
 
 This example keeps `configure.js` without an edit to `lib`. It marks `node_modules/lib/index.js` as side-effectful in one of two ways:
 
-- `rolldown.config.rule.mjs`: a `treeshake.moduleSideEffects` rule. Modules that match no rule still use their `package.json#sideEffects`.
-- `rolldown.config.plugin.mjs`: a `transform` hook that returns `{ moduleSideEffects: true }`. This form also works in Vite.
+- `rolldown.config.rule.mjs` (recommended): a `treeshake.moduleSideEffects` rule. Modules that match no rule still use their `package.json#sideEffects`.
+- `rolldown.config.plugin.mjs`: a `transform` hook that returns `{ moduleSideEffects: true }`.
+
+Prefer the static rule. Rolldown checks the rule in Rust. The plugin needs a call from Rust into JavaScript for each matching module.
 
 ## Run
 
