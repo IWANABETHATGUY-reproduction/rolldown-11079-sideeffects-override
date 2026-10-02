@@ -1,0 +1,15 @@
+{
+  "name": "sideeffects-override-11079",
+  "private": true,
+  "type": "module",
+  "description": "rolldown#11079 - override package.json#sideEffects for one file of a dependency",
+  "scripts": {
+    "verify": "node verify.mjs"
+  },
+  "dependencies": {
+    "lib": "file:./pkg/lib-1.0.0.tgz"
+  },
+  "devDependencies": {
+    "rolldown": "latest"
+  }
+}
